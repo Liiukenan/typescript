@@ -3,6 +3,10 @@
 // const myNamme:string='kenan';
 // null,undefinde,boolean,void,symbol
 
+import { log } from "util";
+
+// import { Interface } from "readline";
+
 // 对象类型
 // const meinv:{
 //     name:string,
@@ -269,16 +273,71 @@
 // get 和 set
 // get 输出计算过的，类似于vue中的getter
 
-class Xiaojiejie {
-  constructor(private _age: number) {}
-  get age() {
-    return this._age - 10;
-  }
-  set age(age: number) {
-    this._age = age + 3;
-  }
-}
-const dajiao = new Xiaojiejie(28);
+// class Xiaojiejie {
+//   constructor(private myage: number) {}
+//   get age() {
+//     return this.myage - 10;
+//   }
+//   set age(age: number) {
+//     this.myage = age + 3;
+//   }
+// }
+// const dajiao = new Xiaojiejie(5);
+// dajiao.age=15;
 // console.log(dajiao.age);
-// dajiao.age = 15;
-console.log(dajiao.age);
+
+// class Girl{
+//   // static静态类直接可调用，不用实例化
+//   static sayLove(){
+//     return 'I love you!';
+//   }
+// }
+// const girl=new Girl();
+// console.log(Girl.sayLove())
+
+
+// class Person{
+//   // 只读属性
+//   public readonly _name: string;
+//   constructor(name:string){
+//     this._name=name
+//   }
+// }
+// const person=new Person('kenan')
+// console.log(person._name);
+
+
+// abstract关键字是用于定义抽象类和在抽象类内部定义抽象方法。
+// 抽象类中的抽象方法不包含具体实现并且必须在派生类中实现。 
+// 抽象方法的语法与接口方法相似，两者都是定义方法签名但不包含方法体。 
+// 然而，抽象方法必须包含 abstract关键字并且可以包含访问修饰符。
+// abstract class Girl{
+//   abstract skill():void;
+// }
+// class Waiter extends Girl{
+//   skill() {
+//     console.log('倒水');
+//   }
+// }
+// class BaseTeachers extends Girl {
+//   skill(){
+//     console.log('基础按摩');
+    
+//   }
+
+// }
+// class SeniorTeachers extends Girl {
+//   skill() {
+//     console.log('深入按摩');
+//   }
+// }
+// const waiter=new Waiter();
+// waiter.skill()
+
+
+
+
+
+
+
+
