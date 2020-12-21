@@ -3,7 +3,6 @@
 // const myNamme:string='kenan';
 // null,undefinde,boolean,void,symbol
 
-import { log } from "util";
 
 // import { Interface } from "readline";
 
@@ -333,6 +332,69 @@ import { log } from "util";
 // }
 // const waiter=new Waiter();
 // waiter.skill()
+
+
+// 关于tscongfig的配置
+// const person:string='kenan'
+// function foundName(name){
+//     return name;
+// }
+// const kenan:string='kenan';
+
+
+
+// 联合类型
+interface Waiter{
+    anjiao:boolean;
+    say:()=>{};
+
+}
+interface Teacher{
+    anjiao:boolean;
+    skill:()=>{}
+}
+
+// 判断属性然后断言
+// function judgeWho(animal:Waiter | Teacher){
+//     if(animal.anjiao){
+//         (animal as Teacher).skill()
+//     }else {
+//     // 类型断言
+//     (animal as Waiter).say()
+//     }
+    
+// }
+
+// function judgWho(animal:Waiter | Teacher){
+//     if('skill' in animal){
+//         animal.skill()
+//     }else {
+//         animal.say()
+//     }
+// }
+
+
+
+// function add(first:string | number,second:string | number){
+//     if(typeof first === 'number' && typeof second === 'number')
+//     return first + second;
+// }
+// console.log(add(3,4));
+
+class NumberObj{
+    count:number;
+}
+function addObject(first:object | NumberObj,second:object | NumberObj){
+    if(first instanceof NumberObj && second instanceof NumberObj){
+        return first.count + second.count
+    }
+    return 0
+}
+
+
+
+
+
 
 
 
