@@ -4,6 +4,7 @@
 // null,undefinde,boolean,void,symbol
 
 
+
 // import { Interface } from "readline";
 
 // 对象类型
@@ -344,15 +345,15 @@
 
 
 // 联合类型
-interface Waiter{
-    anjiao:boolean;
-    say:()=>{};
+// interface Waiter{
+//     anjiao:boolean;
+//     say:()=>{};
 
-}
-interface Teacher{
-    anjiao:boolean;
-    skill:()=>{}
-}
+// }
+// interface Teacher{
+//     anjiao:boolean;
+//     skill:()=>{}
+// }
 
 // 判断属性然后断言
 // function judgeWho(animal:Waiter | Teacher){
@@ -373,7 +374,7 @@ interface Teacher{
 //     }
 // }
 
-
+// 联合类型
 
 // function add(first:string | number,second:string | number){
 //     if(typeof first === 'number' && typeof second === 'number')
@@ -381,23 +382,81 @@ interface Teacher{
 // }
 // console.log(add(3,4));
 
-class NumberObj{
-    count:number;
-}
-function addObject(first:object | NumberObj,second:object | NumberObj){
-    if(first instanceof NumberObj && second instanceof NumberObj){
-        return first.count + second.count
-    }
-    return 0
-}
+// class NumberObj{
+//     count!: number;
+// }
+// function addObject(first:object | NumberObj,second:object | NumberObj){
+//     if(first instanceof NumberObj && second instanceof NumberObj){
+//         return first.count + second.count
+//     }
+//     return 0
+// }
+
+
+
+// 枚举类型;
+// enum Status{
+//     MESSAGE=1,
+//     SPA,
+//     DABAOJIAN
+// }
+
+// function makeLove(status:any) {
+//     if(status ===Status.MESSAGE){
+//         return "message"
+//     }
+//     if(status ===Status.SPA){
+//         return "spa"
+//     }
+//     if(status ===Status.DABAOJIAN){
+//         return "dabaojian";
+//     }
+// }
+
+// console.log(Status.SPA);
+// console.log(Status.SPA,Status[3]);
+// console.log(makeLove(3));
 
 
 
 
+// 泛型;
+// 可定义多个
+// 自带类型推断
+// function join<T,P>(first:T,second:P){
+//     return `${first}${second}`
+// }
+// console.log(join<number,number>(1,1));
+
+// // 泛型数组的使用
+// function arrFun<T>(params: Array<T>) {
+//     return params;
+// }
+// arrFun<string>(["123","4423"])
+
+// interface Girl{
+//     name: string;
+// }
+// class SelectGirl<T extends Girl>{
+//     constructor(private girls:T[]){}
+//     getGirl(index: number):string{
+//         return this.girls[index].name
+//     }
+// }
+// const selecctGirl=new SelectGirl<{name: string}>([{name:'冰冰'},{name:"桥本有菜"}])
+// console.log(selecctGirl.getGirl(1));
 
 
 
-
+// 泛型约束
+// class SelectGirl<T extends  string>{
+//     constructor(private girls:T[]){}
+//     getGirl(index: number):T{
+//         return this.girls[index];
+//     }
+// }
+// const selecctGirl=new SelectGirl<string>(['桥本有菜','范冰冰'])
+// console.log(selecctGirl.getGirl(1));
 
 
 
